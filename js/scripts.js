@@ -9,11 +9,8 @@ $(document).ready(function() {
 
     words = sentenceString.split(" ");
 
-    words.forEach(function(word){
-      if (word.length >= 4) {
-        longWords.push(word);
-      }
-
+    longWords = words.filter(function(word){
+      return word.length >= 4;
     });
 
     longWords.reverse();
